@@ -61,18 +61,18 @@ Future<void> loginCheck(BuildContext context,
 Future<void> _showMyDialog(BuildContext context) async {
   return showDialog<void>(
     context: context,
-    barrierDismissible: false, // user must tap button!
+    barrierDismissible: false,
     builder: (BuildContext context) {
       return AlertDialog(
         title: const Text('Error'),
         content: const SingleChildScrollView(
           child: ListBody(
-            children: <Widget>[
+            children: [
               Text('An error occurred. Please try again.'),
             ],
           ),
         ),
-        actions: <Widget>[
+        actions: [
           TextButton(
             child: const Text('OK'),
             onPressed: () {
